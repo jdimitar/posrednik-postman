@@ -1,0 +1,967 @@
+{
+	"info": {
+		"_postman_id": "be6ee2f8-2ec1-4d0c-a2bf-787d7b5b71d5",
+		"name": "middleman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "signup Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"dimitar@gmail.com\",\r\n  \"name\": \"iskra\",\r\n  \"password\": \"iskratel\",\r\n  \"username\": \"iskra\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/signupCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"signupCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"string\",\r\n  \"usernameOrEmail\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/company/createProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg1MDgyODIzLCJleHAiOjE1ODU2ODc2MjN9.cxc3gg7qkenNHmaxio4niofIHa3Sj5ICr1RFedef5r6zmMb7b6AMSBD0EJdxvE8iu3dZ0fvjtegIyRtpymn0YQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": {\r\n    \"city\": \"string\",\r\n    \"country\": \"string\",\r\n    \"streetAddress\": \"string\",\r\n    \"zip\": \"string\"\r\n  },\r\n  \"contactPerson\": \"string\",\r\n  \"email\": \"dimitar@gmail.com\",\r\n  \"name\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"size\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/company/createProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"company",
+								"createProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/notifications/getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg2Njk0MjY2LCJleHAiOjE1ODcyOTkwNjZ9.tWYpl_tRPt7-73l6fmgZHSPldPXdY3BHkIXoZN2MLRUJpaszk3nRMQwaUU6m8jtkEJv-G9ARF1aneqfVvRRVxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/notifications/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notifications",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7ef8db64-8a1d-4611-83c0-d8dea9d28c35",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "acf3691a-7ec4-41a5-a46d-71137690929d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "localhost:5000/api/auth/verify/iskra",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg1MDgyODIzLCJleHAiOjE1ODU2ODc2MjN9.cxc3gg7qkenNHmaxio4niofIHa3Sj5ICr1RFedef5r6zmMb7b6AMSBD0EJdxvE8iu3dZ0fvjtegIyRtpymn0YQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/auth/verify/iskra",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"verify",
+								"iskra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/apply/getAllApplications",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg2Njk0MjY2LCJleHAiOjE1ODcyOTkwNjZ9.tWYpl_tRPt7-73l6fmgZHSPldPXdY3BHkIXoZN2MLRUJpaszk3nRMQwaUU6m8jtkEJv-G9ARF1aneqfVvRRVxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/apply/getAllApplications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apply",
+								"getAllApplications"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "localhost:5000/jobs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg1MDgyODIzLCJleHAiOjE1ODU2ODc2MjN9.cxc3gg7qkenNHmaxio4niofIHa3Sj5ICr1RFedef5r6zmMb7b6AMSBD0EJdxvE8iu3dZ0fvjtegIyRtpymn0YQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyInfo\": {\r\n    \"address\": {\r\n      \"city\": \"Skopje\",\r\n      \"country\": \"Macedonia\",\r\n      \"streetAddress\": \"Razlovecko Bla\",\r\n      \"zip\": \"1000\"\r\n    },\r\n    \"contactPerson\": \"Dimitar\",\r\n    \"email\": \"mail@mail.com\",\r\n    \"name\": \"iTS\",\r\n    \"phone\": \"+38972272192\",\r\n    \"size\": 150\r\n  },\r\n  \"jobInfo\": {\r\n    \"accomodation\": true,\r\n    \"applications\": 0,\r\n    \"category\": \"string\",\r\n    \"dateFrom\": \"2020-03-25T10:45:06.672Z\",\r\n    \"dateTo\": \"2020-03-25T10:45:06.672Z\",\r\n    \"expireDate\": \"2020-03-25T10:45:06.672Z\",\r\n    \"food\": true,\r\n    \"hourlyPrice\": 0,\r\n    \"jobDescription\": \"bla\",\r\n    \"jobTitle\": \"bla\",\r\n    \"jobType\": \"bla\",\r\n    \"location\": \"bla\",\r\n    \"positions\": 4,\r\n    \"workTimeModel\": \"bla\"\r\n  },\r\n  \"qualifications\": [\r\n    \"string\",\"bla\"\r\n  ],\r\n  \"responsabilities\": [\r\n    \"string\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/jobs",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/jobs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1MzA2NTEwLCJleHAiOjE1ODU5MTEzMTB9.Ojxx7ggZZ414UY9MV6vSJHaEzPd7Pm66ccSjU5vUO6Dh27Wd_7bLTH_bY5R-okHzNJe8J-cloBvqHv-6uU7Vtw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyInfo\": {\r\n    \"address\": {\r\n      \"city\": \"Skopje\",\r\n      \"country\": \"Macedonia\",\r\n      \"streetAddress\": \"Razlovecko Bla\",\r\n      \"zip\": \"1000\"\r\n    },\r\n    \"contactPerson\": \"Dimitar\",\r\n    \"email\": \"mail@mail.com\",\r\n    \"name\": \"iTS\",\r\n    \"phone\": \"+38972272192\",\r\n    \"size\": 150\r\n  },\r\n  \"jobInfo\": {\r\n    \"accomodation\": true,\r\n    \"applications\": 0,\r\n    \"category\": \"string\",\r\n    \"dateFrom\": \"2020-03-25T10:45:06.672Z\",\r\n    \"dateTo\": \"2020-03-25T10:45:06.672Z\",\r\n    \"expireDate\": \"2020-03-25T10:45:06.672Z\",\r\n    \"food\": true,\r\n    \"hourlyPrice\": 0,\r\n    \"jobDescription\": \"bla\",\r\n    \"jobTitle\": \"bla\",\r\n    \"jobType\": \"bla\",\r\n    \"location\": \"bla\",\r\n    \"positions\": 4,\r\n    \"workTimeModel\": \"bla\"\r\n  },\r\n  \"qualifications\": [\r\n    \"string\",\"bla\"\r\n  ],\r\n  \"responsabilities\": [\r\n    \"string\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/jobs",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/jobs/getJobById/10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1MzA2NTEwLCJleHAiOjE1ODU5MTEzMTB9.Ojxx7ggZZ414UY9MV6vSJHaEzPd7Pm66ccSjU5vUO6Dh27Wd_7bLTH_bY5R-okHzNJe8J-cloBvqHv-6uU7Vtw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/jobs/getJobById/22",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"jobs",
+								"getJobById",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"jdimitar@gmail.com\",\r\n  \"name\": \"string\",\r\n  \"password\": \"string\",\r\n  \"username\": \"jdimitar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"string\",\r\n  \"usernameOrEmail\": \"jdimitar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/user/me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/user/me",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTcyODY2ODU0LCJleHAiOjE1NzM0NzE2NTR9.V4YwcY1JjPBFJn3hgYa9nXA8S-ms9Qv-jtCjyKDqzQaqtfmDe-afIMG4mxBsUUmE-C0TBj11dpvV6YOgHhKEjw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": {\r\n    \"city\": \"Skopje\",\r\n    \"country\": \"Macedonia\",\r\n    \"streetAddress\": \"Partizanska\",\r\n    \"zip\": \"1000\"\r\n  },\r\n  \"emergencyContact\": {\r\n    \"email\": \"bla@gmail.com\",\r\n    \"firstName\": \"Bla\",\r\n    \"lastName\": \"Bla\",\r\n    \"phone\": \"+38972261605\",\r\n    \"phone2\": \"+38972261605\"\r\n  },\r\n  \"firstName\": \"Dimitar\",\r\n  \"lastName\": \"Josifov\",\r\n  \"passport\": {\r\n    \"birthDate\": \"2019-11-04T11:19:31.029Z\",\r\n    \"birthPlace\": \"Kochani\",\r\n    \"citizenship\": \"Macedonia\",\r\n    \"gender\": \"male\",\r\n    \"nationality\": \"Macdonian\",\r\n    \"number\": \"123456\",\r\n    \"validFrom\": \"2019-11-04T11:19:31.029Z\",\r\n    \"validTo\": \"2019-11-04T11:19:31.029Z\"\r\n  },\r\n  \"phone\": \"+38972261605\",\r\n  \"phone2\": \"+38972261605\",\r\n  \"user\": {\r\n    \"createdAt\": \"2019-11-04T11:19:31.029Z\",\r\n    \"email\": \"string\",\r\n    \"id\": 1,\r\n    \"name\": \"string\",\r\n    \"password\": \"string\",\r\n    \"roles\": [\r\n      {\r\n        \"id\": 0,\r\n        \"name\": \"ROLE_USER\"\r\n      }\r\n    ],\r\n    \"updatedAt\": \"2019-11-04T11:19:31.029Z\",\r\n    \"username\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/userProfile/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"userProfile",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/jobs/getJobById/10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1MzA2NTEwLCJleHAiOjE1ODU5MTEzMTB9.Ojxx7ggZZ414UY9MV6vSJHaEzPd7Pm66ccSjU5vUO6Dh27Wd_7bLTH_bY5R-okHzNJe8J-cloBvqHv-6uU7Vtw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/jobs/getJobById/22",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"jobs",
+								"getJobById",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/file/upload/db",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1NzIxNTA1LCJleHAiOjE1ODYzMjYzMDV9.peSBkufRKMCaFm0t7zodoy3xtGM-SaOB28AXbsUreIWBC3mS2vGUOz7igq1mwCpQvOHZHLm-lajau3BAf1zSLg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "multipart/form-data",
+									"type": "file",
+									"src": "/C:/Users/iskratel/Downloads/user.js"
+								},
+								{
+									"key": "docName",
+									"value": "passport",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/file/upload/db",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"file",
+								"upload",
+								"db"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/userProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1NzIxNTA1LCJleHAiOjE1ODYzMjYzMDV9.peSBkufRKMCaFm0t7zodoy3xtGM-SaOB28AXbsUreIWBC3mS2vGUOz7igq1mwCpQvOHZHLm-lajau3BAf1zSLg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contactInformation\": {\r\n    \"address\": {\r\n      \"city\": \"Kocani\",\r\n      \"country\": \"Macedonia\",\r\n      \"streetAddress\": \"bla\",\r\n      \"zip\": \"1000\"\r\n    },\r\n    \"email\": \"dmt@gmail.com\",\r\n    \"phone\": \"0721232445\"\r\n  },\r\n  \"education\": [\r\n    {\r\n      \"dateFrom\": \"2020-03-31T19:47:14.518Z\",\r\n      \"dateTo\": \"2020-03-31T19:47:14.518Z\",\r\n      \"university\": \"UKIM\",\r\n      \"vacationEnd\": \"2020-03-31T19:47:14.518Z\",\r\n      \"vacationStart\": \"2020-03-31T19:47:14.518Z\"\r\n    }\r\n  ],\r\n  \"emergencyContact\": {\r\n    \"contactPerson\": \"Dimitar\",\r\n    \"email\": \"dimitar@gmail.com\",\r\n    \"phoneNumber\": \"123456789\"\r\n  },\r\n  \"languages\": [\r\n    {\r\n      \"language\": \"English\",\r\n      \"proficiency\": \"a1\"\r\n    }\r\n  ],\r\n  \"skills\": [\r\n    \"string\"\r\n  ],\r\n  \"socialMedia\": {\r\n    \"facebook\": \"string\",\r\n    \"instagram\": \"string\",\r\n    \"linkedin\": \"string\"\r\n  },\r\n  \"userDetails\": {\r\n    \"aboutMe\": \"string\",\r\n    \"citizenship\": \"string\",\r\n    \"contryOfResidence\": \"string\",\r\n    \"dateOfBirth\": \"2020-03-31T19:47:14.518Z\",\r\n    \"lastName\": \"string\",\r\n    \"name\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"proffession\": \"string\"\r\n  },\r\n  \"workHistory\": [\r\n    {\r\n      \"company\": \"string\",\r\n      \"dateFrom\": \"2020-03-31T19:47:14.518Z\",\r\n      \"dateTo\": \"2020-03-31T19:47:14.518Z\",\r\n      \"jobTitle\": \"string\",\r\n      \"responsabilities\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/userProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"userProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/file/upload/db",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1NzIxNTA1LCJleHAiOjE1ODYzMjYzMDV9.peSBkufRKMCaFm0t7zodoy3xtGM-SaOB28AXbsUreIWBC3mS2vGUOz7igq1mwCpQvOHZHLm-lajau3BAf1zSLg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "multipart/form-data",
+									"type": "file",
+									"src": "/C:/Users/iskratel/Downloads/user.js"
+								},
+								{
+									"key": "docName",
+									"value": "passport",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/file/upload/db",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"file",
+								"upload",
+								"db"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/apply/22",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg2Njk0MjY2LCJleHAiOjE1ODcyOTkwNjZ9.tWYpl_tRPt7-73l6fmgZHSPldPXdY3BHkIXoZN2MLRUJpaszk3nRMQwaUU6m8jtkEJv-G9ARF1aneqfVvRRVxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/apply/22",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apply",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/apply/getApplyedJobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg2Njk0MjY2LCJleHAiOjE1ODcyOTkwNjZ9.tWYpl_tRPt7-73l6fmgZHSPldPXdY3BHkIXoZN2MLRUJpaszk3nRMQwaUU6m8jtkEJv-G9ARF1aneqfVvRRVxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/apply/getApplyedJobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apply",
+								"getApplyedJobs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "localhost:5000/api/polls",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTc3MTI0NDE4LCJleHAiOjE1Nzc3MjkyMTh9.d7QcAtqloboCUa3i8SDnOl3jWlEyDlMQRGBU83bSoLAOy6AHU6X79IWz0LPsTh3cplMW6MPEHSrz1UIt5mne3g",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"choices\": [\r\n  \t{\r\n  \t\t\"text\":\"Apply as developer!\"}\r\n  \t],\r\n  \t\r\n  \"job\": {\r\n    \"description\": \"Dolg tekst za rabotata\",\r\n    \"jobEnds\": \"2019-12-23T19:35:03.600Z\",\r\n    \"jobStarts\": \"2019-12-23T19:35:03.600Z\",\r\n    \"location\": {\r\n      \"city\": \"skopje\",\r\n      \"country\": \"Macedonia\",\r\n      \"streetAddress\": \"ulica\",\r\n      \"zip\": \"1000\"\r\n    },\r\n    \"name\": \"Oglas za dev\",\r\n    \"profile\": \"development\",\r\n    \"qualifications\": \"Developer\",\r\n    \"requirements\": \"5 year experiance\",\r\n    \"salary\": 123\r\n  },\r\n  \"pollLength\": {\r\n    \"days\": 1,\r\n    \"hours\": 2\r\n  },\r\n  \"pollName\": \"Oglas za rabota\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/polls",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"polls"
+					]
+				},
+				"description": "create poll"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/polls",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTcwNTQ3NjkxLCJleHAiOjE1NzExNTI0OTF9.ImV12lfoqHJrdZP46iYfHamfvM3Z7d1OTOtUqr19rcfJRA1vDV9ulgg8GpG8Y4uXMQUosG4lezoEc6Rb5s9CzQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"choices\": [\r\n  \t{\"text\":\"Apply as developer!\"}\r\n  \t],\r\n  \"pollLength\": {\r\n    \"days\": 1,\r\n    \"hours\": 1\r\n  },\r\n  \"question\": \"Iskratel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/polls",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"polls"
+					]
+				},
+				"description": "get polls"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/polls/2/votes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTcwNjE4NjM4LCJleHAiOjE1NzEyMjM0Mzh9.GkQuT4Du1OrxkUAMfRVoDBWqwMQxOw1Do-VmIDTmZ58EtWFODUzJvJu62shaVVnw_6svjhr4o-XzGyrGxn1wDA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"choiceId\":3,\"pollId\":2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/polls/2/votes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"polls",
+						"2",
+						"votes"
+					]
+				},
+				"description": "vote for poll, pol_id in url"
+			},
+			"response": []
+		},
+		{
+			"name": "posrednik.mk:5000/subscribe/new/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jdimitar@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+38972261605",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "posrednik.mk:5000/subscribe/new/",
+					"host": [
+						"posrednik",
+						"mk"
+					],
+					"port": "5000",
+					"path": [
+						"subscribe",
+						"new",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/file/upload/db",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTgyMDI4NDQ4LCJleHAiOjE1ODI2MzMyNDh9.JJ-tmI6jOUPHYXPSDfHnQ56JtlKANfu6jnqaySqfkxGOPzO5oegJaBQKi9DW14o5pgjU07DgNW2RhyOlo7YUow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/iskratel/Desktop/Java-collection.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/file/upload/db",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"file",
+						"upload",
+						"db"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTg1MDgyODIzLCJleHAiOjE1ODU2ODc2MjN9.cxc3gg7qkenNHmaxio4niofIHa3Sj5ICr1RFedef5r6zmMb7b6AMSBD0EJdxvE8iu3dZ0fvjtegIyRtpymn0YQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyInfo\": {\r\n    \"address\": {\r\n      \"city\": \"Skopje\",\r\n      \"country\": \"Macedonia\",\r\n      \"streetAddress\": \"Razlovecko Bla\",\r\n      \"zip\": \"1000\"\r\n    },\r\n    \"contactPerson\": \"Dimitar\",\r\n    \"email\": \"mail@mail.com\",\r\n    \"name\": \"iTS\",\r\n    \"phone\": \"+38972272192\",\r\n    \"size\": 150\r\n  },\r\n  \"jobInfo\": {\r\n    \"accomodation\": true,\r\n    \"applications\": 0,\r\n    \"category\": \"string\",\r\n    \"dateFrom\": \"2020-03-25T10:45:06.672Z\",\r\n    \"dateTo\": \"2020-03-25T10:45:06.672Z\",\r\n    \"expireDate\": \"2020-03-25T10:45:06.672Z\",\r\n    \"food\": true,\r\n    \"hourlyPrice\": 0,\r\n    \"jobDescription\": \"bla\",\r\n    \"jobTitle\": \"bla\",\r\n    \"jobType\": \"bla\",\r\n    \"location\": \"bla\",\r\n    \"positions\": 4,\r\n    \"workTimeModel\": \"bla\"\r\n  },\r\n  \"qualifications\": [\r\n    \"string\",\"bla\"\r\n  ],\r\n  \"responsabilities\": [\r\n    \"string\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/jobs/getJobById/10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTg1MzA2NTEwLCJleHAiOjE1ODU5MTEzMTB9.Ojxx7ggZZ414UY9MV6vSJHaEzPd7Pm66ccSjU5vUO6Dh27Wd_7bLTH_bY5R-okHzNJe8J-cloBvqHv-6uU7Vtw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/jobs/getJobById/22",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jobs",
+						"getJobById",
+						"22"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
